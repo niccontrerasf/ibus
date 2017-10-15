@@ -12,6 +12,12 @@ var patito = ['PC705','PC463','PC494'];
 
 var port = process.env.PORT || 8080;
 
+/*
+recu(['pc711'],(cb)=>{
+        lo(cb);
+    })
+*/
+
 app.get('/:par',(req,res)=>{
     var pars = [req.params.par];
     
@@ -44,6 +50,8 @@ function recu(pars,cb){
         request(call, function(err, res, html){
             if(!err){
                 var $ = cheerio.load(html);
+                $('.cabecera1').remove();
+                $('.imagenfo').remove();
                 hpp = hpp+$('table')+'\n';
                 //if(i==pars.length-1) return cb(hpp);
                 
