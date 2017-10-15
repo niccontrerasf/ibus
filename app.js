@@ -17,6 +17,7 @@ app.get('/:par',(req,res)=>{
     
     if(pars[0]=='patito') pars = patito;
     
+    
     hpp = '<link rel="stylesheet" type="text/css" href="./css.css">\n';
     recu(pars,(cb)=>{
         res.set('Content-Type','text/html');
