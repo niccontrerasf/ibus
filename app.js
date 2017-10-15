@@ -9,7 +9,7 @@ app.use(express.static('.'));
 var hpp;
 var pars = ['PC711','PC705','pc713'];
 
-
+var port = process.env.port || 8080;
 app.get('/:par',(req,res)=>{
     var pars = [req.params.par];
     hpp = '<link rel="stylesheet" type="text/css" href="./css.css">\n';
@@ -62,5 +62,5 @@ function httph(paradero){
     return reto;
 }
 
-app.listen('8080');
+app.listen(port);
 exports = module.exports = app;
