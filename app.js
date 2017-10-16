@@ -9,7 +9,7 @@ app.use(express.static('.'));
 var hpp;
 var pars = ['PC711','PC705','pc713'];
 var patito = ['PC705','PC463','PC494'];
-var watimbo = ['pc713','pc705','pa383''];
+var watimbo = ['pc713','pc705','pa383'];
 
 var port = process.env.PORT || 8080;
 
